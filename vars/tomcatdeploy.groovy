@@ -5,7 +5,7 @@ sshagent([cred_id]){
  //copy war file into tomcat server
        sh "scp -o StrictHostKeyChecking=no target/myweb.war ${user}@${ip}:/opt/tomcat8/webapps"
  //start and stop the tomcat8
-       sh "ssh ${user}@{ip} /opt/tomcat8/bin/shutdown.sh"
-       sh "ssh ${user}@{ip} /opt/tomcat8/bin/startup.sh"
+       sh "ssh ${user}@${ip} /opt/tomcat8/bin/shutdown.sh"
+       sh "ssh ${user}@${ip} /opt/tomcat8/bin/startup.sh"
        }
     }
